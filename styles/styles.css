@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    scroll-behavior: smooth;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* End Of Global Styles */
+
+/* Start of Nav Styles */
+#nav {
+    position: fixed;
+    left : 0;
+    top : 0;
+    width : 100vw;
+    height : auto;
+    z-index: 1000;
+}
+
+#nav .nav {
+    min-height: 8vh;
+    background-color: #fff;
+    transition: .3s ease background-color;
+}
+
+#nav .nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width : 100%;
+    height : 100%;
+	max-width: 1300px;
+	padding: 0 10px;
+}
+
+#nav .nav-list ul{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height : 100vh;
+    justify-content: center;
+    list-style: none;
+	position: absolute;
+    align-items: center;
+    left : 100%;
+    top : 0;
+	z-index: 1;
+	overflow-x: hidden;
+	transition: 0.5s ease left; 
+}
+
+#nav .nav-list ul.active {
+	left: 0%;
+}
+
+#nav .nav-list ul a {
+	font-size: 2.5rem;
+	font-weight: 500;
+	letter-spacing: 0.2rem;
+	text-decoration: none;
+	color: white;
+	text-transform: uppercase;
+	padding: 20px;
+	display: block;
+}
+
+/* End of Nav Styles */
+
+#head {
+    background-image: url('../images/stacked-peaks-haikei.png');
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+}
+
+#head::after {
+    content: '';
+    position: absolute;
+    background-color: #000;
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+}
+
+#head .banner {
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: flex-start;
+    padding: 0 5rem;
+}
+
+#head h1 {
+    display: block;
+    width: fit-content;
+    color: white;
+    font-weight: 300;
+    position: relative;
+}
